@@ -21,9 +21,9 @@ kramdown:
   toc_levels:       1..6
   enable_coderay:   false
 mathjax:            true
-sass:
-  sass_dir:         _sass
-  style:            compressed
+#sass:
+#  sass_dir:         _sass
+#  style:            compressed
 
 # Comments
 #disqus_shortname:   taylantatli
@@ -31,7 +31,7 @@ sass:
 # Social
 # if you don't have any of social below, comment the line.
 google:
-  scholar:          CogentMentat
+  scholar:          HUB8B50AAAAJ
   #plus:            #username
   #analytics:
   #verify:
