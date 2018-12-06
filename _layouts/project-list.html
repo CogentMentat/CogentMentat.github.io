@@ -23,7 +23,8 @@ layout: compress
                 </div>
                 <div class="post-list">
                     {% assign ordsort = site.projects | sort: 'projectnum' %}
-                    {% for post in ordsort %} 
+                    {% assign ordsortrev = ordsort | reverse %}
+                    {% for post in ordsortrev %} 
                         <ul>
                             <li class="wow fadeInLeft" data-wow-duration="1.5s">
                                 <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
