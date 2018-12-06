@@ -22,9 +22,8 @@ layout: compress
                     {{ content }}
                 </div>
                 <div class="post-list">
-                    {% assign datesort = site.projects | sort: 'date' %}
-                    {% assign datesortrev = datesort | reverse %}
-                    {% for post in datesortrev %} 
+                    {% assign ordsort = site.projects | sort: 'projectnum' %}
+                    {% for post in ordsort %} 
                         <ul>
                             <li class="wow fadeInLeft" data-wow-duration="1.5s">
                                 <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
