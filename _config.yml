@@ -15,8 +15,9 @@ url:                https://cogentmentat.github.io
 permalink:          /:title/
 markdown:           kramdown
 collections:
-  - posts
-  - projects
+  posts:
+  projects:
+    output: true
 highlighter:        rouge
 kramdown:
   auto_ids:         true
