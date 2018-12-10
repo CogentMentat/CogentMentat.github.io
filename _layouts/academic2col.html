@@ -1,0 +1,108 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
+<head>
+    {% include head.html %}
+</head>
+<body>
+    {% include nav.html %}
+    <!-- Header -->
+    <header class="header flex" role="banner"
+    style="margin-top: 8.5rem">
+        <div class="wrapper animated fadeIn flex"
+            style="max-width: 1200px;
+                align-items: flex-start">
+
+            <!-- column 1 -->
+            <div class="flex" style="align-items: flex-start;
+                width: 50%;
+                min-width: 375px;
+                flex: 1 0 auto;
+                margin: 0rem;
+                padding: 0rem">
+
+                <!-- pic/social links -->
+                <div style="margin: 0.5rem;
+                    flex: 1 0 375px;
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    padding-right: 1.5em">
+                    <a href="{{ site.url }}">
+                        <img src="{{ site.logo }}" class="img-circle zoombtn animated">
+                    </a>
+                    <h3 class="title">
+                        <a class="zoombtn" href="{{ site.url }}">
+                        	<p style="font-size:1.2rem;font-weight:300">{{ site.title }}</p>
+			            </a>
+                    </h3>
+                    <hr class="hr-line">
+                    <h3 class="title">
+                        <p style="font-size:1rem;font-weight:300">Academic
+                        page</p>
+                    </h3>
+                    {% include social-links.html %}
+                </div>
+
+                <!-- interest==0 divs -->
+                {% assign ordsort = site.academic_bioitems | sort: 'order' %}
+                {% for item in ordsort %} 
+                    {% if item.interest == 0 %}
+                    <div style="flex: 1 0 375px;
+                        margin-left: 1rem;
+                        margin-right: 1rem;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        padding-left: 0;
+                        padding-right: 1.5em">
+                        <h2>{{ item.title }}</h2>
+                        {{ item.content }}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+
+            <!-- column 2 -->
+            <div class="flex" style="align-items: flex-start;
+                width: 50%;
+                min-width: 375px;
+                flex: 1 0 auto;
+                margin: 0rem;
+                padding: 0rem">
+
+                <!-- interest==1 divs -->
+                {% assign ordsort = site.academic_bioitems | sort: 'order' %}
+                {% for item in ordsort %} 
+                    {% if item.interest == 1 %}
+                    <div class="wrapper"
+                        style="flex: 1 0 375px;
+                        margin: 0.5rem">
+                        <h2>{{ item.title }}</h2>
+                        {{ item.content }}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+
+            <div class="content">
+                {{ content }}
+            </div>
+
+        </div>
+    </header>
+    {% include scripts.html %}
+</body>
+</html>
