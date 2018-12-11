@@ -86,11 +86,16 @@ layout: compress
                 {% assign ordsort = site.academic_bioitems | sort: 'order' %}
                 {% for item in ordsort %} 
                     {% if item.interest == 1 %}
+                    {% assign mod = item.order | modulo: 4 %}
+                    {% assign color = site.data.themecolors.justblues[mod] %}
                     <div class="wrapper"
                         style="flex: 1 0 375px;
-                        margin: 0.5rem">
-                        <h2>{{ item.title }}</h2>
-                        {{ item.content }}
+                        margin: 0.5rem;
+                        background: {{ color }}">
+                        <div class="darkbgtext">
+                            <h2>{{ item.title }}</h2>
+                            {{ item.content }}
+                        </div>
                     </div>
                     {% endif %}
                 {% endfor %}

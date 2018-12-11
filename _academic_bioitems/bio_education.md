@@ -1,6 +1,6 @@
 ---
 title: Education
-order: 1
+order: 2
 interest: 0
 ---
 
