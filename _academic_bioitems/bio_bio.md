@@ -1,6 +1,6 @@
 ---
 title: Biography
-order: 1
+order: 0
 interest: 0
 ---
     

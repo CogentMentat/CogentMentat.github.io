@@ -148,3 +148,28 @@ table {
 dt {
     font-weight: bolder;
 }
+
+// dark backgrounds
+.darkbgtext {
+    color: $silver;
+    h2 {
+        color: $color_mischka
+    }
+    a {
+      transition: color .4s;
+      color: $darkerthancrimson;
+      &:link {
+        color: $darkerthancrimson;
+      }
+      &:visited {
+        color: $darkerthancrimson;
+      }
+      &:hover {
+        color: $red;
+      }
+      &:active {
+        transition: color .3s;
+        color: $darkerthancrimson;
+      }
+    }
+}
