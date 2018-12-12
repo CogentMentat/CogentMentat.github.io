@@ -10,7 +10,9 @@ research language use with respect to social movements, politics, and group
 formation.
 
 * Advisor: [Johan Bollen](https://www.informatics.indiana.edu/jbollen/)
-* Previous advisor: [Simon DeDeo](http://tuvalu.santafe.edu/~simon/)
+* Previous mentors:
+  - [Simon DeDeo](http://tuvalu.santafe.edu/~simon/)
+  - [Doug Fields](http://physics.unm.edu/Fields/index.php)
 
 In the past, I helped [smash particles
 together]({{site.url}}/projects/p1-FVTX/).
