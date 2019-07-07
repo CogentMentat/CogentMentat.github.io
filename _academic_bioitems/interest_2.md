@@ -1,6 +1,8 @@
 ---
 title: "Interest: Identity and social group formation"
 order: 1
+col1: 0
+col2: 1
 interest: 1
 ---
 

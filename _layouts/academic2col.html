@@ -42,8 +42,8 @@ layout: compress
                     </a>
                     <h3 class="title">
                         <a class="zoombtn" href="{{ site.url }}">
-                        	<p style="font-size:1.2rem;font-weight:300">{{ site.title }}</p>
-			            </a>
+                        <p style="font-size:1.2rem;font-weight:300">{{ site.title }}</p>
+                    </a>
                     </h3>
                     <hr class="hr-line">
                     <h3 class="title">
@@ -56,7 +56,7 @@ layout: compress
                 <!-- interest==0 divs -->
                 {% assign ordsort = site.academic_bioitems | sort: 'order' %}
                 {% for item in ordsort %}
-                    {% if item.interest == 0 %}
+                    {% if item.col1 == 1 %}
                     <div style="flex: 1 0 375px;
                         margin-left: 1rem;
                         margin-right: 1rem;
@@ -85,18 +85,34 @@ layout: compress
                 <!-- interest==1 divs -->
                 {% assign ordsort = site.academic_bioitems | sort: 'order' %}
                 {% for item in ordsort %}
-                    {% if item.interest == 1 %}
-                    {% assign mod = item.order | modulo: 4 %}
-                    {% assign color = site.data.themecolors.justblues[mod] %}
-                    <div class="wrapper"
-                        style="flex: 1 0 375px;
-                        margin: 0.5rem;
-                        background: {{ color }}">
-                        <div class="darkbgtext">
+                    {% if item.col2 == 1 %}
+                        {% if item.interest == 1 %}
+                        {% assign mod = item.order | modulo: 4 %}
+                        {% assign color = site.data.themecolors.justblues[mod] %}
+                        <div class="wrapper"
+                            style="flex: 1 0 375px;
+                            margin: 0.5rem;
+                            background: {{ color }}">
+                            <div class="darkbgtext">
+                                <h2>{{ item.title }}</h2>
+                                {{ item.content }}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if item.interest == 0 %}
+                        <div style="flex: 1 0 375px;
+                            margin-left: 1rem;
+                            margin-right: 1rem;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                            padding-left: 0;
+                            padding-right: 1.5em">
                             <h2>{{ item.title }}</h2>
                             {{ item.content }}
                         </div>
-                    </div>
+                        {% endif %}
                     {% endif %}
                 {% endfor %}
 

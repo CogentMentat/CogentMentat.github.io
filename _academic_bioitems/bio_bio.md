@@ -1,6 +1,8 @@
 ---
 title: Biography
 order: 0
+col1: 1
+col2: 0
 interest: 0
 ---
     
