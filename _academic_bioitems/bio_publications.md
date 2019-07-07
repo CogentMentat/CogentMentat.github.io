@@ -1,6 +1,8 @@
 ---
 title: Publications
 order: 1
+col1: 1
+col2: 0
 interest: 0
 ---
 
