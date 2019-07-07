@@ -4,7 +4,7 @@ bio:                'Personal page'
 description:        "Personal site of Alexander T. J. Barron, Informatics PhD candidate in complex systems at Indianana University."
 reading_time:       false
 words_per_minute:   200
-logo:               'assets/img/seventiesman_logo_smallborder.png'
+logo:               'assets/img/smile_NC.png'
 background:         'assets/img/hipsterbg_warmer_blur.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
