@@ -16,6 +16,8 @@ formation.
   - [Simon DeDeo](http://tuvalu.santafe.edu/~simon/)
   - [Doug Fields](http://physics.unm.edu/Fields/index.php)
 
+I have reviewed for [Cognitive Science](https://onlinelibrary.wiley.com/journal/15516709) and [PLOS One](https://journals.plos.org/plosone/).
+
 In the past, I helped [smash particles
 together]({{site.url}}/projects/p1-FVTX/).
 
