@@ -1,7 +1,7 @@
 # Site
-title:              Alexander T. J. Barron
-bio:                'Personal page'
-description:        "Personal site of Alexander T. J. Barron, Informatics PhD candidate in complex systems at Indianana University."
+title:              'Alexander T. J. Barron'
+bio:                'Personal site'
+description:        "Personal site of Alexander T. J. Barron."
 reading_time:       false
 words_per_minute:   200
 logo:               'assets/img/smile_NC.png'
@@ -32,7 +32,7 @@ mathjax:            true
 #  style:            compressed
 
 # Comments
-#disqus_shortname:   taylantatli
+#disqus_shortname:   username
 
 # Social
 # if you don't have any of social below, comment the line.
@@ -50,7 +50,7 @@ twitter:            CogentMentat
 #facebook:           username
 github-url:         CogentMentat
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
+linkedin:           alexander-tj-barron
 #xing:              username
 #instagram:          username
 #lastfm:            username
