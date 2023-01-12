@@ -6,5 +6,5 @@ col2: 0
 interest: 0
 ---
 
-* PhD in Informatics, Indiana University, 2021
-* BS Double Major in Physics and Mathematics, University of New Mexico, 2011
+* PhD in Informatics, Indiana University, 2022
+* BS Double Major in Physics and Applied Mathematics, University of New Mexico, 2011
