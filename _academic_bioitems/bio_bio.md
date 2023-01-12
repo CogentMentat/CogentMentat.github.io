@@ -6,7 +6,7 @@ col2: 0
 interest: 0
 ---
     
-I am a PhD candidate in Informatics at Indiana University, Bloomington, USA,
+I am a PhD in Informatics, Indiana University, Bloomington, USA,
 in the [Center for Complex Networks and Systems](http://cnets.indiana.edu/). I
 research language use with respect to social movements, politics, and group
 formation.
