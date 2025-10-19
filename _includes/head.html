@@ -62,8 +62,13 @@
             background-attachment: fixed;
             z-index: -1;
             opacity: 0;
-            -webkit-animation: bgFadeIn 1.5s ease-in forwards;
-            animation: bgFadeIn 1.5s ease-in forwards;
+            -webkit-animation: bgFadeIn 1s ease-in forwards;
+            animation: bgFadeIn 1s ease-in forwards;
+        }
+        .container.animated,
+        .wrapper.animated {
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
         }
     </style>
     {% endif %}
