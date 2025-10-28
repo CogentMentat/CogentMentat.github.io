@@ -83,6 +83,7 @@ body {
 	@include transition(.5s);
 	@media #{$small} {
 		width: 92%;
+		margin-top: 1rem; /* outer space above white container on mobile */
 		padding-top: 1rem; /* add breathing room above avatar on mobile */
 	    box-shadow: none;
 	}
