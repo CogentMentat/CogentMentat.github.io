@@ -212,7 +212,7 @@ header .entry-meta {
 }
 
 .pane {
-	flex: 1 1 22rem;
+	flex: 0 1 auto; /* size to content; avoid vertical stretching in columns */
 	width: 100%;
 	max-width: 65ch;
 	margin: 0.5rem auto; /* center within column */
