@@ -13,30 +13,13 @@ layout: compress
     {% include nav.html %}
     <!-- Header -->
     <header class="header" role="banner">
-    <div class="wrapper animated fadeIn flex"
-            style="max-width: 1200px;
-            align-items: flex-start;
-            margin-top: 9.5rem">
+    <div class="wrapper two-col animated fadeIn flex" style="align-items: flex-start; margin-top: 9.5rem">
 
             <!-- column 1 -->
-            <div class="flex" style="align-items: flex-start;
-                width: 50%;
-                min-width: 375px;
-                flex: 1 0 auto;
-                margin: 0rem;
-                padding: 0rem">
+            <div class="flex two-col__col" style="align-items: flex-start; margin: 0rem; padding: 0rem">
 
                 <!-- pic/social links -->
-                <div style="margin: 0.5rem;
-                    flex: 1 0 375px;
-                    margin-left: 1rem;
-                    margin-right: 1rem;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    padding-left: 0;
-                    padding-right: 1.5em">
+                <div class="pane">
                     <a href="{{ site.url }}">
                         <img src="{{ site.logo }}" class="img-circle zoombtn animated">
                     </a>
@@ -57,15 +40,7 @@ layout: compress
                 {% assign ordsort = site.academic_bioitems | sort: 'order' %}
                 {% for item in ordsort %}
                     {% if item.col1 == 1 %}
-                    <div style="flex: 1 0 375px;
-                        margin-left: 1rem;
-                        margin-right: 1rem;
-                        margin-top: 0;
-                        margin-bottom: 0;
-                        padding-top: 0;
-                        padding-bottom: 0;
-                        padding-left: 0;
-                        padding-right: 1.5em">
+                    <div class="pane">
                         <h2>{{ item.title }}</h2>
                         {{ item.content }}
                     </div>
@@ -75,12 +50,7 @@ layout: compress
             </div>
 
             <!-- column 2 -->
-            <div class="flex" style="align-items: flex-start;
-                width: 50%;
-                min-width: 375px;
-                flex: 1 0 auto;
-                margin: 0rem;
-                padding: 0rem">
+            <div class="flex two-col__col" style="align-items: flex-start; margin: 0rem; padding: 0rem">
 
                 <!-- interest==1 divs -->
                 {% assign ordsort = site.academic_bioitems | sort: 'order' %}
@@ -89,10 +59,7 @@ layout: compress
                         {% if item.interest == 1 %}
                         {% assign mod = item.order | modulo: 4 %}
                         {% assign color = site.data.themecolors.justblues[mod] %}
-                        <div class="wrapper"
-                            style="flex: 1 0 375px;
-                            margin: 0.5rem;
-                            background: {{ color }}">
+                        <div class="pane pane--accent" style="background: {{ color }};">
                             <div class="darkbgtext">
                                 <h2>{{ item.title }}</h2>
                                 {{ item.content }}
@@ -100,15 +67,7 @@ layout: compress
                         </div>
                         {% endif %}
                         {% if item.interest == 0 %}
-                        <div style="flex: 1 0 375px;
-                            margin-left: 1rem;
-                            margin-right: 1rem;
-                            margin-top: 0;
-                            margin-bottom: 0;
-                            padding-top: 0;
-                            padding-bottom: 0;
-                            padding-left: 0;
-                            padding-right: 1.5em">
+                        <div class="pane">
                             <h2>{{ item.title }}</h2>
                             {{ item.content }}
                         </div>

@@ -192,6 +192,40 @@ header .entry-meta {
     float: right;
     text-align: right;
 }
+
+.two-col {
+	max-width: 1200px;
+	margin-top: 9.5rem;
+	justify-content: center;
+	gap: 2rem; /* space between columns */
+}
+
+.two-col__col {
+	flex: 1 1 24rem; /* fluid columns; no hard 50% to avoid gap overflow math */
+	min-width: 18rem;
+	padding: 0 1rem; /* symmetric inner gutter */
+	display: flex;
+	flex-direction: column; /* stack inner panes vertically */
+	align-items: stretch; /* let pane width control centering */
+}
+
+.pane {
+	flex: 1 1 22rem;
+	width: 100%;
+	max-width: 65ch;
+	margin: 0.5rem auto; /* center within column */
+	padding: 1rem 1.5rem; /* restore inner padding */
+}
+
+.pane--accent {
+	border-radius: 3px;
+	box-shadow: 0 0 10px 0 rgba($color_shark,0.15);
+}
+
+.projects__content {
+	flex: 1 1 26rem;
+	max-width: 65ch;
+}
 .bg-ready {}
 // Background image layer and animation
 body::before {
@@ -273,5 +307,19 @@ body::before {
 		height: 100vh;   // fallback
 		height: 100dvh;  // better on mobile browsers
 		background-position: center top;
+	}
+	.two-col {
+		padding: 0 1rem;
+	}
+	.two-col__col {
+		width: 100%;
+		flex: 1 1 100%;
+		min-width: 0;
+	}
+	.pane,
+	.projects__content {
+		flex: 1 1 auto;
+		max-width: min(55ch, 100%);
+		margin: 0.5rem auto;
 	}
 }
