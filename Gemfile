@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "3.4.7"
+ruby "3.4.1"
 
 gem "jekyll", "~> 4.4"
 gem "webrick", "~> 1.8"   # needed for `jekyll serve` on modern Ruby
