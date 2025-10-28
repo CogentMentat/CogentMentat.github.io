@@ -192,6 +192,32 @@ header .entry-meta {
     float: right;
     text-align: right;
 }
+.bg-ready {}
+// Background image layer and animation
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: var(--bg-image);
+	background-repeat: var(--bg-repeat, no-repeat);
+	background-size: var(--bg-size, cover);
+	background-position: center center;
+	background-attachment: fixed;
+	z-index: -1;
+	opacity: 0;
+	-webkit-animation: bgFadeIn 1s ease-in forwards;
+	animation: bgFadeIn 1s ease-in forwards;
+}
+
+// Sequential content fade-in (delay)
+.container.animated,
+.wrapper.animated {
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
 .feature {
     @include transition(.5s);
     @media #{$small} {
@@ -237,5 +263,15 @@ header .entry-meta {
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+// Mobile fixes for background layer
+@media #{$small} {
+	body::before {
+		background-attachment: scroll;
+		height: 100vh;   // fallback
+		height: 100dvh;  // better on mobile browsers
+		background-position: center top;
 	}
 }
