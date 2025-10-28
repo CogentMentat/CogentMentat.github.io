@@ -196,7 +196,7 @@ header .entry-meta {
 }
 
 .two-col {
-	max-width: 1200px;
+	max-width: 1100px;
 	margin-top: 9.5rem;
 	justify-content: center;
 	gap: 2rem; /* space between columns */
@@ -217,6 +217,38 @@ header .entry-meta {
 	max-width: 65ch;
 	margin: 0.5rem auto; /* center within column */
 	padding: 1rem 1.5rem; /* restore inner padding */
+}
+
+.pane--accent {
+	border-radius: 3px;
+	box-shadow: 0 0 10px 0 rgba($color_shark,0.15);
+}
+
+/* Wide screens: use grid for deterministic two-column layout */
+@media #{$notsmall} {
+	.two-col {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2rem;       /* matches previous gap */
+		row-gap: 1rem;
+		justify-content: center; /* center the grid within the max-width */
+	}
+
+	.two-col__col {
+		display: block;          /* grid items; let panes control their own layout */
+		padding: 0;              /* gutters handled by column-gap and outer padding */
+	}
+
+	.pane {
+		max-width: 50ch;        /* typographic cap while allowing two-up fit */
+	}
+}
+
+// Large screens: clamp pane width for stable two-column fit under container cap
+@media #{$notsmall} {
+	.pane {
+		max-width: clamp(50ch, 40vw - 3rem, 560px);
+	}
 }
 
 .pane--accent {
