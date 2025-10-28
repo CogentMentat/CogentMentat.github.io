@@ -202,6 +202,16 @@ header .entry-meta {
 	gap: 2rem; /* space between columns */
 }
 
+// Standardize top spacing across layouts to match Academic (desktop/tablet)
+@media #{$notsmall} {
+	.header > .container {
+		margin-top: 9.5rem;
+	}
+	.header > .wrapper {
+		margin-top: 9.5rem; // override base .wrapper's 4rem top margin
+	}
+}
+
 .two-col__col {
 	flex: 1 1 24rem; /* fluid columns; no hard 50% to avoid gap overflow math */
 	min-width: 18rem;
