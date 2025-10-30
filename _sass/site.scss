@@ -366,4 +366,11 @@ body::before {
 		max-width: min(55ch, 100%);
 		margin: 0.5rem auto;
 	}
+	// Unify top spacing across layouts on small screens
+	.header > .container {
+		margin-top: 9.5rem;
+	}
+	.header > .wrapper {
+		margin-top: 9.5rem;
+	}
 }
